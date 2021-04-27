@@ -1,0 +1,8 @@
+clumiosdk
+=========
+
+.. toctree::
+   :maxdepth: 4
+
+   clumioapi
+   setup
