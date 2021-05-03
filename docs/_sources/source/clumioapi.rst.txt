@@ -30,14 +30,6 @@ clumioapi.clumioapi\_client module
    :undoc-members:
    :show-inheritance:
 
-clumioapi.clumioapi\_client\_example module
--------------------------------------------
-
-.. automodule:: clumioapi.clumioapi_client_example
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 clumioapi.configuration module
 ------------------------------
 

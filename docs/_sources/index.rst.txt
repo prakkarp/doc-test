@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to clumio-python-sdk's documentation!
+Welcome to Clumio Python SDK's documentation!
 =============================================
 
 .. toctree::
@@ -20,9 +20,11 @@ These dependencies are defined in the *requirements.txt* file that comes with th
 To resolve these dependencies, you can use the PIP Dependency manager. Install it by following steps at https://pip.pypa.io/en/stable/installing/.
 
 Python and PIP executables should be defined in your PATH. Open command prompt and type ``pip --version``.
-This should display the version of the PIP Dependency Manager installed if your installation was successful and the paths are properly defined.::
+This should display the version of the PIP Dependency Manager installed if your installation was successful and the paths are properly defined.
 
-$ git clone https://github.com/clumio/oss/clumio-python-sdk.git
+::
+
+$ git clone https://github.com/clumio-code/clumio-python-sdk.git
 $ cd clumio-python-sdk
 $ virtualenv venv
 $ . venv/bin/activate
@@ -31,29 +33,30 @@ $ pip install -e .
 
 Quick Start
 -----------
-The following section explains how to use the clumioapi SDK package.
+The following code block explains how to use the clumioapi SDK package.
 
-Start by importing the clumioapi_client and configuration modules from the clumioapi package
-``from clumioapi import configuration, clumioapi_client``
+.. code-block:: python
 
-Create the configuration object by passing in the API Token required for authentication.
-``config = configuration.Configuration(api_token='...')``
+   #Start by importing the clumioapi_client and configuration modules from the clumioapi package.
+   from clumioapi import configuration, clumioapi_client
 
-Create a client instance by passing in the configuration.
-``client = clumioapi_client.ClumioAPIClient(config=config)``
+   #Create the configuration object by passing in the API Token required for authentication.
+   config = configuration.Configuration(api_token='...')
 
-Using the client you can get the resource on which you want to invoke the operations. For example, in order to create a 
-policy, get the policy_definitions resource.
-``policy_defn = client.policy_definitions_v1()``
+   #Create a client instance by passing in the configuration.
+   client = clumioapi_client.ClumioAPIClient(config=config)
 
-Invoke operations on the resource.
-``list_response = pd.list_policy_definitions()``
+   #Using the client you can get the resource on which you want to invoke the operations.
+   #For example, in order to create a policy, get the policy_definitions resource.
+   policy_defn = client.policy_definitions_v1()
+
+   #Invoke operations on the resource.
+   list_response = pd.list_policy_definitions()
 
 
 
 Indices and tables
 ==================
-
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`

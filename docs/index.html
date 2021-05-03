@@ -46,7 +46,7 @@
   
   
   
-    <title>Welcome to clumio-python-sdk’s documentation! &#8212; clumio-python-sdk 0.1.0 documentation</title>
+    <title>Welcome to Clumio Python SDK’s documentation! &#8212; clumio-python-sdk 0.1.0 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/css/clumiotheme.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -91,7 +91,7 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           <span class="md-header-nav__topic">Clumio Python SDK</span>
-          <span class="md-header-nav__topic"> Welcome to clumio-python-sdk’s documentation! </span>
+          <span class="md-header-nav__topic"> Welcome to Clumio Python SDK’s documentation! </span>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -180,7 +180,7 @@
 <nav class="md-nav md-nav--secondary">
     <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#index--page-root" class="md-nav__link">Welcome to clumio-python-sdk’s documentation!</a><nav class="md-nav">
+        <li class="md-nav__item"><a href="#index--page-root" class="md-nav__link">Welcome to Clumio Python SDK’s documentation!</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#how-to-build" class="md-nav__link">How to Build</a>
         </li>
@@ -205,7 +205,7 @@
           <article class="md-content__inner md-typeset" role="main">
             
   
-<h1 id="index--page-root">Welcome to clumio-python-sdk’s documentation!<a class="headerlink" href="#index--page-root" title="Permalink to this headline">¶</a></h1>
+<h1 id="index--page-root">Welcome to Clumio Python SDK’s documentation!<a class="headerlink" href="#index--page-root" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <p>Clumio Python SDK provides an object-oriented API which allows developers to write software using operations which Clumio provides for protecting data. This document provides information on how to build and use the SDK.</p>
@@ -215,8 +215,8 @@
 These dependencies are defined in the <em>requirements.txt</em> file that comes with the SDK.
 To resolve these dependencies, you can use the PIP Dependency manager. Install it by following steps at <a class="reference external" href="https://pip.pypa.io/en/stable/installing/">https://pip.pypa.io/en/stable/installing/</a>.</p>
 <p>Python and PIP executables should be defined in your PATH. Open command prompt and type <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">--version</span></code>.
-This should display the version of the PIP Dependency Manager installed if your installation was successful and the paths are properly defined.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/clumio/oss/clumio-python-sdk.git
+This should display the version of the PIP Dependency Manager installed if your installation was successful and the paths are properly defined.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/clumio-code/clumio-python-sdk.git
 $ cd clumio-python-sdk
 $ virtualenv venv
 $ . venv/bin/activate
@@ -227,18 +227,24 @@ $ pip install -e .
 
 
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h2>
-<p>The following section explains how to use the clumioapi SDK package.</p>
-<p>Start by importing the clumioapi_client and configuration modules from the clumioapi package
-<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">clumioapi</span> <span class="pre">import</span> <span class="pre">configuration,</span> <span class="pre">clumioapi_client</span></code></p>
-<p>Create the configuration object by passing in the API Token required for authentication.
-<code class="docutils literal notranslate"><span class="pre">config</span> <span class="pre">=</span> <span class="pre">configuration.Configuration(api_token='...')</span></code></p>
-<p>Create a client instance by passing in the configuration.
-<code class="docutils literal notranslate"><span class="pre">client</span> <span class="pre">=</span> <span class="pre">clumioapi_client.ClumioAPIClient(config=config)</span></code></p>
-<p>Using the client you can get the resource on which you want to invoke the operations. For example, in order to create a
-policy, get the policy_definitions resource.
-<code class="docutils literal notranslate"><span class="pre">policy_defn</span> <span class="pre">=</span> <span class="pre">client.policy_definitions_v1()</span></code></p>
-<p>Invoke operations on the resource.
-<code class="docutils literal notranslate"><span class="pre">list_response</span> <span class="pre">=</span> <span class="pre">pd.list_policy_definitions()</span></code></p>
+<p>The following code block explains how to use the clumioapi SDK package.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Start by importing the clumioapi_client and configuration modules from the clumioapi package.</span>
+<span class="kn">from</span> <span class="nn">clumioapi</span> <span class="kn">import</span> <span class="n">configuration</span><span class="p">,</span> <span class="n">clumioapi_client</span>
+
+<span class="c1">#Create the configuration object by passing in the API Token required for authentication.</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">Configuration</span><span class="p">(</span><span class="n">api_token</span><span class="o">=</span><span class="s1">'...'</span><span class="p">)</span>
+
+<span class="c1">#Create a client instance by passing in the configuration.</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">clumioapi_client</span><span class="o">.</span><span class="n">ClumioAPIClient</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+
+<span class="c1">#Using the client you can get the resource on which you want to invoke the operations.</span>
+<span class="c1">#For example, in order to create a policy, get the policy_definitions resource.</span>
+<span class="n">policy_defn</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">policy_definitions_v1</span><span class="p">()</span>
+
+<span class="c1">#Invoke operations on the resource.</span>
+<span class="n">list_response</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">list_policy_definitions</span><span class="p">()</span>
+</pre></div>
+</div>
 
 
 
